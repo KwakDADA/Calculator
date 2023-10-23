@@ -118,7 +118,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentButtonTapped(_ sender: UIButton) {
-        
+        currNum = String(Double(currNum)! / 100)
+        digit(num: currNum)
     }
     
     
