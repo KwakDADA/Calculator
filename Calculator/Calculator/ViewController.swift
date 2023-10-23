@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     var prevOperation = ""
     
     @IBOutlet var clearButton: UIButton!
-    
     @IBOutlet var sumButton: UIButton!
     @IBOutlet var subButton: UIButton!
     @IBOutlet var mulButton: UIButton!
@@ -28,10 +27,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
     }
     
     func digit(num: String) {
-        guard num.count > 3 else {
+        guard !num.contains(".") && num.count > 3 else {
             display.text = num
             return
         }
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         clearButton.setTitle("C", for: .normal)
         calcButtonInit()
         if equalSignTapped { allClear() }
-        guard currNum.count < 9 else { return }
+        guard currNum.filter({$0.isNumber}).count < 9 else { return }
         
         if currNum == "0" {
             currNum = (sender.titleLabel?.text)!
@@ -109,18 +109,29 @@ class ViewController: UIViewController {
     }
     
     @IBAction func positiveNegativeButtonTapped(_ sender: UIButton) {
-        currNum = String(Int(currNum)! * (-1))
+        if currNum.contains(".") {
+            currNum = String(Double(currNum)! * (-1))
+        } else {
+            currNum = String(Int(currNum)! * (-1))
+        }
         digit(num: currNum)
     }
     
+    @IBAction func percentButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    
     func operate(num1: String, num2: String, op: String) {
+        var ans = 0.0
         switch op {
-        case "+": savedNum = String(Int(num1)! + Int(num2)!)
-        case "-": savedNum = String(Int(num1)! - Int(num2)!)
-        case "×": savedNum = String(Int(num1)! * Int(num2)!)
-        case "÷": savedNum = String(Int(num1)! / Int(num2)!)
+        case "+": ans = Double(num1)! + Double(num2)!
+        case "-": ans = Double(num1)! - Double(num2)!
+        case "×": ans = Double(num1)! * Double(num2)!
+        case "÷": ans = Double(num1)! / Double(num2)!
         default: break
         }
+        savedNum = ans == Double(Int(ans)) ? String(Int(ans)) : String(round(ans*100000000)/100000000)
     }
     
     @IBAction func calcButtonTapped(_ sender: UIButton) {
