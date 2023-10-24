@@ -64,6 +64,11 @@ class ViewController: UIViewController {
     }
     
     func digit(num: String) {
+        guard num != "오류" else {
+            display.text = "오류"
+            return
+        }
+        
         let integer = num.split(separator: ".")[0]
         var pointNumber: String?
         if num.split(separator: ".").count > 1 {
@@ -76,7 +81,7 @@ class ViewController: UIViewController {
         let numberOfTop = integer.count % 3
         for i in 0..<integer.count {
             let c = Array(integer)[i]
-            if c.isNumber {
+            if c.isNumber || c == "-" {
                 temp.append(c)
             } else { continue }
             
@@ -115,8 +120,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func numericButtonTapped(_ sender: UIButton) {
-        print(sender.titleLabel!.text!)
-        clearButton.setTitle("C", for: .normal)
+        clearButton.titleLabel!.text = "C"
+        clearButton.titleLabel?.textAlignment = .center
         calcButtonInit()
         if equalSignTapped { allClear() }
         guard currNum.filter({$0.isNumber}).count < 9 else { return }
@@ -131,7 +136,7 @@ class ViewController: UIViewController {
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         if currNum != "0" {
-            clearButton.setTitle("AC", for: .normal)
+            clearButton.titleLabel!.text = "AC"
             currNum = "0"
             digit(num: currNum)
             switch currOperation {
@@ -162,12 +167,26 @@ class ViewController: UIViewController {
     
     
     func operate(num1: String, num2: String, op: String) {
+        print(num1, op, num2)
+        if num1 == "오류" || (op == "÷" && num2 == "0") {
+            savedNum = "오류"
+            return
+        }
+        
         var ans = 0.0
         switch op {
-        case "+": ans = Double(num1)! + Double(num2)!
-        case "-": ans = Double(num1)! - Double(num2)!
-        case "×": ans = Double(num1)! * Double(num2)!
-        case "÷": ans = Double(num1)! / Double(num2)!
+        case "+": 
+            ans = Double(num1)! + Double(num2)!
+        case "-":
+            ans = Double(num1)! - Double(num2)!
+        case "×":
+            ans = Double(num1)! * Double(num2)!
+        case "÷":
+            guard num2 != "0" else {
+                savedNum = "오류"
+                return
+            }
+            ans = Double(num1)! / Double(num2)!
         default: break
         }
         savedNum = ans == Double(Int(ans)) ? String(Int(ans)) : String(round(ans*100000000)/100000000)
@@ -178,11 +197,6 @@ class ViewController: UIViewController {
         buttonSelected(button: sender)
         
         currOperation = sender.titleLabel!.text!
-        
-//        guard currNum != "0" else {
-//            prevOperation = currOperation
-//            return
-//        }
         
         if startOver {
             startOver = false
@@ -201,19 +215,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func eqButtonTapped(_ sender: UIButton) {
-        print(savedNum, currNum, prevOperation, currOperation)
         calcButtonInit()
         equalSignTapped = true
         guard savedNum != "0" || prevOperation != "" else { return }
         
-        if currNum == "0" {
+        if currNum == "0" && display.text != "0" {
             currNum = savedNum
-            operate(num1: currNum, num2: currNum, op: prevOperation)
-        } else {
-            operate(num1: savedNum, num2: currNum, op: prevOperation)
         }
         
-        print(savedNum, currNum)
+        operate(num1: savedNum, num2: currNum, op: prevOperation)
         digit(num: savedNum)
     }
 }

@@ -64,7 +64,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="+/-"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="+/-">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="positiveNegativeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="76u-hc-mu9"/>
@@ -77,7 +77,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="%"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="%">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="percentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PB3-G9-pEb"/>
@@ -90,7 +90,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="÷"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="÷">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZx-pf-2T6"/>
@@ -107,7 +107,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="7">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f94-Mb-3IA"/>
@@ -119,7 +119,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="8">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q6v-4y-uSY"/>
@@ -131,7 +131,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="9">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hDh-1s-b2e"/>
@@ -143,7 +143,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="×">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5P-T3-8HQ"/>
@@ -160,7 +160,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="4">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWR-SH-7ZW"/>
@@ -172,7 +172,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="5">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MR6-uo-qf2"/>
@@ -184,7 +184,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="6">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1m-Ig-f0o"/>
@@ -196,7 +196,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="-">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lN6-qL-9iV"/>
@@ -213,7 +213,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="1">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFb-X3-vc4"/>
@@ -225,7 +225,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="2">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkk-o1-lfY"/>
@@ -237,7 +237,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="3">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0SW-9n-wIE"/>
@@ -249,7 +249,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="+">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdS-Ct-bl5"/>
@@ -266,7 +266,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="0">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s12-4D-AU8"/>
@@ -278,7 +278,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title=".">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="numericButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Kh-1d-y0j"/>
@@ -290,7 +290,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="=">
-                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="eqButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQa-nC-gWr"/>
