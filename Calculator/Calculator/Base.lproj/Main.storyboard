@@ -332,10 +332,23 @@
                         <outlet property="clearButton" destination="VlZ-kg-2e5" id="vTV-OB-nYk"/>
                         <outlet property="display" destination="p5B-8J-1GI" id="RA0-mU-g8u"/>
                         <outlet property="divButton" destination="mFj-ng-L3L" id="zDF-oT-6TM"/>
+                        <outlet property="dotButton" destination="Tcq-2B-HZn" id="y3Y-S3-uBf"/>
+                        <outlet property="eightButton" destination="X9E-AA-7aJ" id="J0Z-pP-4t0"/>
                         <outlet property="eqButton" destination="mUE-cT-3oe" id="oTv-K5-DXn"/>
+                        <outlet property="fiveButton" destination="6Su-Yf-xmf" id="49x-B6-9Qq"/>
+                        <outlet property="fourButton" destination="mVK-eg-KIi" id="0Tg-L9-mkL"/>
                         <outlet property="mulButton" destination="WV0-Iz-VQd" id="ydK-aJ-P4U"/>
+                        <outlet property="nineButton" destination="oH5-RL-XgX" id="vHY-x1-5g1"/>
+                        <outlet property="oneButton" destination="f4L-Np-M7m" id="PsU-uf-ZZc"/>
+                        <outlet property="percentButton" destination="tc9-oB-YPH" id="Ohz-Fd-1nL"/>
+                        <outlet property="posNegButton" destination="ZY4-0Z-t6q" id="Ytv-Ou-1zY"/>
+                        <outlet property="sevenButton" destination="RBb-EE-vo3" id="sho-J2-NnL"/>
+                        <outlet property="sixButton" destination="peu-JW-1CJ" id="U92-4F-Dtx"/>
                         <outlet property="subButton" destination="ETA-FI-sSl" id="ihA-uK-FDC"/>
                         <outlet property="sumButton" destination="Ntm-P8-nXg" id="G59-xB-bAA"/>
+                        <outlet property="threeButton" destination="v0n-8w-5CF" id="C49-js-Gjd"/>
+                        <outlet property="twoButton" destination="5Xi-hm-w1y" id="mR0-tj-rhn"/>
+                        <outlet property="zeroButton" destination="O4t-mz-9Cc" id="EPH-Ug-lBD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
