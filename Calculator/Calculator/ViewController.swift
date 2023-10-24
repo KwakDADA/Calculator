@@ -15,12 +15,24 @@ class ViewController: UIViewController {
     var prevOperation = ""
     
     @IBOutlet var clearButton: UIButton!
-    
+    @IBOutlet var posNegButton: UIButton!
+    @IBOutlet var percentButton: UIButton!
     @IBOutlet var sumButton: UIButton!
     @IBOutlet var subButton: UIButton!
     @IBOutlet var mulButton: UIButton!
     @IBOutlet var divButton: UIButton!
     @IBOutlet var eqButton: UIButton!
+    @IBOutlet var oneButton: UIButton!
+    @IBOutlet var twoButton: UIButton!
+    @IBOutlet var threeButton: UIButton!
+    @IBOutlet var fourButton: UIButton!
+    @IBOutlet var fiveButton: UIButton!
+    @IBOutlet var sixButton: UIButton!
+    @IBOutlet var sevenButton: UIButton!
+    @IBOutlet var eightButton: UIButton!
+    @IBOutlet var nineButton: UIButton!
+    @IBOutlet var zeroButton: UIButton!
+    @IBOutlet var dotButton: UIButton!
     
     var startOver = true
     var equalSignTapped = false
@@ -28,26 +40,51 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
+        // make the button shape rounded
+        clearButton.layer.cornerRadius = 37.5
+        posNegButton.layer.cornerRadius = 37.5
+        percentButton.layer.cornerRadius = 37.5
+        sumButton.layer.cornerRadius = 37.5
+        subButton.layer.cornerRadius = 37.5
+        mulButton.layer.cornerRadius = 37.5
+        divButton.layer.cornerRadius = 37.5
+        eqButton.layer.cornerRadius = 37.5
+        oneButton.layer.cornerRadius = 37.5
+        twoButton.layer.cornerRadius = 37.5
+        threeButton.layer.cornerRadius = 37.5
+        fourButton.layer.cornerRadius = 37.5
+        fiveButton.layer.cornerRadius = 37.5
+        sixButton.layer.cornerRadius = 37.5
+        sevenButton.layer.cornerRadius = 37.5
+        eightButton.layer.cornerRadius = 37.5
+        nineButton.layer.cornerRadius = 37.5
+        zeroButton.layer.cornerRadius = 37.5
+        dotButton.layer.cornerRadius = 37.5
     }
     
     func digit(num: String) {
-        guard num.count > 3 else {
-            display.text = num
-            return
+        let integer = num.split(separator: ".")[0]
+        var pointNumber: String?
+        if num.split(separator: ".").count > 1 {
+            pointNumber = "." + num.split(separator: ".")[1]
+        } else if num.contains(".") {
+            pointNumber = "."
         }
+        
         var temp = ""
-        let numberOfTop = num.count % 3
-        for i in 0..<num.count {
-            let c = Array(num)[i]
+        let numberOfTop = integer.count % 3
+        for i in 0..<integer.count {
+            let c = Array(integer)[i]
             if c.isNumber {
                 temp.append(c)
             } else { continue }
             
-            if i+1 == numberOfTop || ((i+1) % 3 == numberOfTop && i != num.count-1) {
+            if integer.count > 3 && (i+1 == numberOfTop || ((i+1) % 3 == numberOfTop && i != integer.count-1)) {
                 temp += ","
             }
         }
-        display.text = temp
+        display.text = temp + (pointNumber ?? "")
     }
     
     func calcButtonInit() {
@@ -78,12 +115,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func numericButtonTapped(_ sender: UIButton) {
+        print(sender.titleLabel!.text!)
         clearButton.setTitle("C", for: .normal)
         calcButtonInit()
         if equalSignTapped { allClear() }
-        guard currNum.count < 9 else { return }
+        guard currNum.filter({$0.isNumber}).count < 9 else { return }
         
-        if currNum == "0" {
+        if currNum == "0" && sender != dotButton {
             currNum = (sender.titleLabel?.text)!
         } else {
             currNum.append((sender.titleLabel?.text)!)
@@ -109,18 +147,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func positiveNegativeButtonTapped(_ sender: UIButton) {
-        currNum = String(Int(currNum)! * (-1))
+        if currNum.contains(".") {
+            currNum = String(Double(currNum)! * (-1))
+        } else {
+            currNum = String(Int(currNum)! * (-1))
+        }
         digit(num: currNum)
     }
     
+    @IBAction func percentButtonTapped(_ sender: UIButton) {
+        currNum = String(Double(currNum)! / 100)
+        digit(num: currNum)
+    }
+    
+    
     func operate(num1: String, num2: String, op: String) {
+        var ans = 0.0
         switch op {
-        case "+": savedNum = String(Int(num1)! + Int(num2)!)
-        case "-": savedNum = String(Int(num1)! - Int(num2)!)
-        case "×": savedNum = String(Int(num1)! * Int(num2)!)
-        case "÷": savedNum = String(Int(num1)! / Int(num2)!)
+        case "+": ans = Double(num1)! + Double(num2)!
+        case "-": ans = Double(num1)! - Double(num2)!
+        case "×": ans = Double(num1)! * Double(num2)!
+        case "÷": ans = Double(num1)! / Double(num2)!
         default: break
         }
+        savedNum = ans == Double(Int(ans)) ? String(Int(ans)) : String(round(ans*100000000)/100000000)
     }
     
     @IBAction func calcButtonTapped(_ sender: UIButton) {
